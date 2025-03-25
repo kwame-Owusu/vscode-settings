@@ -1,0 +1,136 @@
+{
+  // Editor settings
+  "editor.fontLigatures": true,
+  "editor.fontWeight": "500",
+  "editor.fontFamily": "JetBrains Mono, MonoLisa",
+  "editor.unicodeHighlight.invisibleCharacters": false,
+  "editor.cursorSmoothCaretAnimation": "on",
+  "editor.cursorStyle": "line",
+  "editor.smoothScrolling": true,
+  "editor.lineHeight": 1.85,
+  "editor.guides.indentation": true,
+  "editor.tabSize": 2,
+
+  // Terminal settings
+  "terminal.integrated.gpuAcceleration": "off",
+  "terminal.integrated.fontFamily": "Hack Nerd Font Mono",
+  "terminal.integrated.fontSize": 14,
+
+  // Language server settings
+  "python.languageServer": "Pylance",
+  "javascript.validate.enable": true,
+  "javascript.suggestionActions.enabled": false,
+  "python.terminal.executeInFileDir": true,
+
+  // Explorer settings
+  "explorer.compactFolders": false,
+  "breadcrumbs.enabled": false,
+  "symbols.hidesExplorerArrows": false,
+
+  // Editor behavior settings
+  "editor.scrollbar.vertical": "visible",
+  "editor.scrollbar.horizontal": "visible",
+  "editor.scrollbar.horizontalScrollbarSize": 12,
+  "editor.scrollbar.verticalScrollbarSize": 12,
+  "editor.lineNumbers": "relative",
+  "editor.minimap.enabled": false,
+  "editor.renderLineHighlight": "gutter",
+  "editor.renderWhitespace": "none",
+  "editor.formatOnSave": false,
+  "editor.showFoldingControls": "mouseover",
+  "editor.glyphMargin": false,
+  "editor.occurrencesHighlight": "off" ,
+  "editor.stickyScroll.enabled": false,
+  "workbench.layoutControl.enabled": false,
+
+  // Live server settings
+  "liveServer.settings.donotShowInfoMsg": true,
+  "liveServer.settings.AdvanceCustomBrowserCmdLine": "",
+  "liveServer.settings.CustomBrowser": "firefox",
+  "liveServer.settings.useLocalIp": true,
+
+  // Formatting settings
+  "[python]": {
+    "editor.formatOnType": true,
+    "editor.defaultFormatter": "ms-python.autopep8"
+  },
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+
+  // Workbench settings
+  "window.titleBarStyle": "custom",
+  "workbench.colorCustomizations": {
+    "vityBarBadge.background": "#4D4C7D"
+  },
+  "workbench.statusBar.visible": false,
+  "workbench.editor.showTabs": "multiple",
+  "workbench.editor.labelFormat": "short",
+  "workbench.tree.renderIndentGuides": "none",
+  "workbench.startupEditor": "none",
+  "workbench.iconTheme": "symbols",
+
+  // Additional settings
+  "window.menuBarVisibility": "compact",
+  "window.density.editorTabHeight": "compact",
+  "window.zoomLevel": 1,
+  "git.autofetch": true,
+  "code-runner.runInTerminal": true,
+  "files.autoSave": "onWindowChange",
+// TypeScript settings
+  "typescript.enablePromptUseWorkspaceTsdk": true,
+  "typescript.tsdk": "node_modules/typescript/lib",
+
+  // Diff editor settings
+  "diffEditor.ignoreTrimWhitespace": true,
+  "window.commandCenter": false,
+  "workbench.colorTheme": "Gruvbox Light Soft",
+  "editor.fontSize": 16,
+  "extensions.experimental.affinity": {
+    "asvetliakov.vscode-neovim": 1
+  },
+  "chat.commandCenter.enabled": false,
+
+
+  //vim motions settings
+  "vim.leader": "<Space>",
+  "vim.hlsearch": true,
+  "vim.normalModeKeyBindingsNonRecursive": [ 
+    { "before": ["leader", "v"], "commands": [":vsplit"] }, { "before": ["leader", "s"], "commands": [":split"] }, 
+    // NAVIGATION
+    // switch b/w buffers
+    { "before": ["<S-h>"], "commands": [":bprevious"] },
+    { "before": ["<S-l>"], "commands": [":bnext"] }, 
+  
+     // panes switching
+    {
+      "before": ["leader", "h"],
+      "commands": ["workbench.action.focusLeftGroup"]
+    },
+    {
+      "before": ["leader", "j"],
+      "commands": ["workbench.action.focusBelowGroup"]
+    },
+    {
+      "before": ["leader", "k"],
+      "commands": ["workbench.action.focusAboveGroup"]
+    },
+    {
+      "before": ["leader", "l"],
+      "commands": ["workbench.action.focusRightGroup"]
+    },
+  ],
+  // not allowing vim to use these key bindings because they are already in use in my 
+  // keybindings.json
+  "vim.handleKeys": {
+        "<C-a>": false,
+        "<C-b>": false,
+        "<C-e>": false,
+        "<C-n>": false,
+        "<C-x>": false,
+        "<C-p>": false, // used for opening new file
+        "<C-w>": false,// used for deleting open windows 
+        "<S-j>": false, // used for toggling terminal 
+        "<C-f>": false // used for spefic words 
+},
+"workbench.activityBar.location": "hidden"
+  
+}
