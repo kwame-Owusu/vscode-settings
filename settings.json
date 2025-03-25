@@ -93,6 +93,13 @@
   //vim motions settings
   "vim.leader": "<Space>",
   "vim.hlsearch": true,
+  "vim.insertModeKeyBindings": [
+    // exit to normal mode from insert mode
+    {
+      "before": ["j", "k"],
+      "after": ["<Esc>"]
+    },   
+  ],
   "vim.normalModeKeyBindingsNonRecursive": [ 
     { "before": ["leader", "v"], "commands": [":vsplit"] }, { "before": ["leader", "s"], "commands": [":split"] }, 
     // NAVIGATION
