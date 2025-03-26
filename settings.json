@@ -96,7 +96,7 @@
   "vim.insertModeKeyBindings": [
     // exit to normal mode from insert mode
     {
-      "before": ["j", "j"],
+      "before": ["j", "k"],
       "after": ["<Esc>"]
     },   
   ],
