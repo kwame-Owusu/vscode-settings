@@ -133,7 +133,12 @@
     { "before": ["J"], "commands": ["editor.action.moveLinesDownAction"] },
     { "before": ["K"], "commands": ["editor.action.moveLinesUpAction"] },
     // toggle comment selection
-    { "before": ["leader", "c"], "commands": ["editor.action.commentLine"] }
+    { "before": ["leader", "c"], "commands": ["editor.action.commentLine"] },
+    //escape visual selections upon opening a file
+     {
+      "before": ["j", "j"],
+      "after": ["<Esc>"]
+    },  
   ],
   // not allowing vim to use these key bindings because they are already in use in my 
   // keybindings.json
