@@ -110,4 +110,14 @@
     "command": "workbench.action.terminal.focusPrevious",
     "when": "terminalFocus"
   },
+  {
+    "key": "tab",
+    "command": "editor.action.indentLines",
+    "when": "editorHasSelection"
+    },
+    {
+      "key": "shift+tab",
+      "command": "editor.action.outdentLines",
+      "when": "editorHasSelection"
+    }
 ]
