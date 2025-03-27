@@ -90,65 +90,47 @@
   "chat.commandCenter.enabled": false,
 
 
-  //vim motions settings
-  "vim.leader": "<Space>",
-  "vim.hlsearch": true,
-  "vim.insertModeKeyBindings": [
-    // exit to normal mode from insert mode
-    {
-      "before": ["j", "k"],
-      "after": ["<Esc>"]
-    },   
-  ],
-  "vim.normalModeKeyBindingsNonRecursive": [ 
-    { "before": ["leader", "v"], "commands": [":vsplit"] }, { "before": ["leader", "s"], "commands": [":split"] }, 
-    // NAVIGATION
-    // switch b/w buffers
-    { "before": ["<S-h>"], "commands": [":bprevious"] },
-    { "before": ["<S-l>"], "commands": [":bnext"] }, 
+ "vim.leader": "<Space>",
+"vim.hlsearch": true,
+"vim.insertModeKeyBindings": [
+  {
+    "before": ["j", "k"],
+    "after": ["<Esc>"]
+  }
+],
+"vim.normalModeKeyBindingsNonRecursive": [ 
+  { "before": ["leader", "v"], "commands": [":vsplit"] }, 
+  { "before": ["leader", "s"], "commands": [":split"] }, 
   
-     // panes switching
-    {
-      "before": ["leader", "h"],
-      "commands": ["workbench.action.focusLeftGroup"]
-    },
-    {
-      "before": ["leader", "j"],
-      "commands": ["workbench.action.focusBelowGroup"]
-    },
-    {
-      "before": ["leader", "k"],
-      "commands": ["workbench.action.focusAboveGroup"]
-    },
-    {
-      "before": ["leader", "l"],
-      "commands": ["workbench.action.focusRightGroup"]
-    },
-  ],
-  "vim.visualModeKeyBindings": [
-    // Stay in visual mode while indenting
-    { "before": ["<"], "commands": ["editor.action.outdentLines"] },
-    { "before": [">"], "commands": ["editor.action.indentLines"] },
-    // Move selected lines while staying in visual mode
-    { "before": ["J"], "commands": ["editor.action.moveLinesDownAction"] },
-    { "before": ["K"], "commands": ["editor.action.moveLinesUpAction"] },
-    // toggle comment selection
-    { "before": ["leader", "c"], "commands": ["editor.action.commentLine"] },
-    
-  ],
-  // not allowing vim to use these key bindings because they are already in use in my 
-  // keybindings.json
-  "vim.handleKeys": {
-        "<C-a>": false,
-        "<C-b>": false,
-        "<C-e>": false,
-        "<C-n>": false,
-        "<C-x>": false,
-        "<C-p>": false, // used for opening new file
-        "<C-w>": false,// used for deleting open windows 
-        "<S-j>": false, // used for toggling terminal 
-        "<C-f>": false // used for spefic words 
-},
+  // Buffer Navigation
+  { "before": ["<S-h>"], "commands": [":bprevious"] },
+  { "before": ["<S-l>"], "commands": [":bnext"] }, 
+
+  // Pane Switching
+  { "before": ["leader", "h"], "commands": ["workbench.action.focusLeftGroup"] },
+  { "before": ["leader", "j"], "commands": ["workbench.action.focusBelowGroup"] },
+  { "before": ["leader", "k"], "commands": ["workbench.action.focusAboveGroup"] },
+  { "before": ["leader", "l"], "commands": ["workbench.action.focusRightGroup"] }
+],
+"vim.visualModeKeyBindings": [
+  // Stay in visual mode while indenting (FIXED)
+  { "before": [">"], "commands": ["editor.action.indentLines"], "repeat": true },
+  { "before": ["<"], "commands": ["editor.action.outdentLines"], "repeat": true },
+
+  // Toggle comment selection
+  { "before": ["leader", "c"], "commands": ["editor.action.commentLine"] }
+],
+"vim.handleKeys": {
+  "<C-a>": false,
+  "<C-b>": false,
+  "<C-e>": false,
+  "<C-n>": false,
+  "<C-x>": false,
+  "<C-p>": false, // Used for opening new file
+  "<C-w>": false, // Used for deleting open windows 
+  "<S-j>": false, // Used for toggling terminal 
+  "<C-f>": false  // Used for specific words 
+}, 
 "workbench.activityBar.location": "hidden"
   
 }
