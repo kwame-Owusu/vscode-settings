@@ -1,123 +1,138 @@
+// Place your key bindings in this file to override the defaults
 
 [
   {
     "key": "ctrl+a",
     "command": "workbench.action.toggleActivityBarVisibility",
-    "when": ""
+    "when": "",
   },
   {
     "key": "ctrl+/",
     "command": "workbench.action.addComment",
-    "when": "editorTextFocus"
+    "when": "editorTextFocus",
   },
 
   {
     "key": "ctrl+b",
     "command": "workbench.action.toggleSidebarVisibility",
-    "when": ""
+    "when": "",
   },
 
   {
     "key": "ctrl+e",
     "command": "workbench.files.action.focusFilesExplorer",
-    "when": ""
+    "when": "",
   },
 
   {
     "key": "ctrl+/",
-    "command": "workbench.action.addComment"
+    "command": "workbench.action.addComment",
   },
 
   {
     "key": "ctrl+space",
     "command": "editor.action.showHover",
-    "when": "editorTextFocus"
+    "when": "editorTextFocus",
   },
   {
     "key": "ctrl+alt+z",
     "command": "workbench.action.toggleZenMode",
-    "when": ""
+    "when": "",
   },
   {
     "key": "ctrl+/",
     "command": "workbench.action.focusActiveEditorGroup",
-    "when": ""
+    "when": "",
   },
   {
     "key": "r",
     "command": "renameFile",
-    "when": "filesExplorerFocus && !inputFocus"
+    "when": "filesExplorerFocus && !inputFocus",
   },
   {
     "key": "ctrl+n",
-    "command": "explorer.newFolder"
+    "command": "explorer.newFolder",
+  },
+  // copilot keybindings
+  {
+    "key": "ctrl+alt+c",
+    "command": "workbench.action.toggleAuxiliaryBar",
+  },
+  {
+    "key": "ctrl+alt+w",
+    "command": "workbench.action.chatEditor.newChat",
+  },
+  // show status bar
+  {
+    "key": "ctrl+alt+s",
+    "command": "workbench.action.toggleStatusbarVisibility",
   },
   {
     "key": "ctr+k+c",
     "command": "workbench.view.search.resetViewLocation",
-    "when": ""
+    "when": "",
   },
   {
     "key": "n",
     "command": "explorer.newFile",
-    "when": "filesExplorerFocus && !inputFocus"
+    "when": "filesExplorerFocus && !inputFocus",
   },
   {
     "key": "c",
     "command": "filesExplorer.copy",
-    "when": "filesExplorerFocus && !inputFocus"
+    "when": "filesExplorerFocus && !inputFocus",
   },
   {
     "key": "p",
     "command": "filesExplorer.paste",
-    "when": "filesExplorerFocus && !inputFocus"
+    "when": "filesExplorerFocus && !inputFocus",
   },
   {
     "key": "ctrl+x",
     "command": "filesExplorer.cut",
-    "when": "filesExplorerFocus && !inputFocus"
+    "when": "filesExplorerFocus && !inputFocus",
   },
   {
     "key": "d",
     "command": "deleteFile",
-    "when": "filesExplorerFocus && !inputFocus"
+    "when": "filesExplorerFocus && !inputFocus",
   },
   // toggle the terminal
-   {
+  {
     "key": "ctrl+shift+j",
-    "command": "workbench.action.togglePanel"
+    "command": "workbench.action.togglePanel",
   },
   //open new terminal
   {
     "key": "ctrl+shift+n",
     "command": "workbench.action.terminal.new",
-    "when": "terminalFocus"
+    "when": "terminalFocus",
   },
   //kill focused terminal
   {
     "key": "ctrl+shift+w",
     "command": "workbench.action.terminal.kill",
-    "when": "terminalFocus"
+    "when": "terminalFocus",
   },
   // switch between terminals
   {
     "key": "ctrl+shift+a",
     "command": "workbench.action.terminal.focusNext",
-    "when": "terminalFocus"
+    "when": "terminalFocus",
   },
   {
     "key": "ctrl+shift+b",
     "command": "workbench.action.terminal.focusPrevious",
-    "when": "terminalFocus"
+    "when": "terminalFocus",
   },
   {
     "key": "tab",
     "command": "editor.action.indentLines",
-    "when": "editorHasSelection"
-    },
-    {
-      "key": "shift+tab",
-      "command": "editor.action.outdentLines",
-      "when": "editorHasSelection"
-    }
+    "when": "editorHasSelection",
+  },
+  {
+    "key": "shift+tab",
+    "command": "editor.action.outdentLines",
+    "when": "editorHasSelection",
+  },
 ]
